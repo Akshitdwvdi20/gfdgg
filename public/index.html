@@ -8,34 +8,27 @@
 
 <div class="app">
 
-  <!-- HEADER -->
   <div class="header">
     <h2>🎬 Watch Party</h2>
-    <div class="controls">
-      <input id="roomInput" placeholder="Room ID..." />
-      <button onclick="joinRoom()">Join</button>
-      <button class="share" onclick="startShare()">Share Screen</button>
-    </div>
+    <input id="roomInput" placeholder="Room ID">
+    <button onclick="joinRoom()">Join</button>
   </div>
 
-  <!-- MAIN -->
+  <div class="controls">
+    <input id="videoURL" placeholder="Paste video URL">
+    <button onclick="loadVideo()">Load</button>
+  </div>
+
   <div class="main">
+    <video id="video" controls></video>
 
-    <!-- VIDEO -->
-    <div class="video-container">
-      <video id="video" autoplay playsinline></video>
-    </div>
-
-    <!-- CHAT -->
-    <div class="chat-container">
+    <div class="chat">
       <div id="messages"></div>
-
       <div class="chat-input">
-        <input id="msg" placeholder="Type a message..." />
+        <input id="msg" placeholder="Message">
         <button onclick="sendMsg()">Send</button>
       </div>
     </div>
-
   </div>
 
 </div>
