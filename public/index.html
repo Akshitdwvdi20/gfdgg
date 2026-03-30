@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Watch Party</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+
+  <!-- HEADER -->
+  <div class="header">
+    <h2>🎬 Watch Party</h2>
+    <div class="controls">
+      <input id="roomInput" placeholder="Room ID..." />
+      <button onclick="joinRoom()">Join</button>
+      <button class="share" onclick="startShare()">Share Screen</button>
+    </div>
+  </div>
+
+  <!-- MAIN -->
+  <div class="main">
+
+    <!-- VIDEO -->
+    <div class="video-container">
+      <video id="video" autoplay playsinline></video>
+    </div>
+
+    <!-- CHAT -->
+    <div class="chat-container">
+      <div id="messages"></div>
+
+      <div class="chat-input">
+        <input id="msg" placeholder="Type a message..." />
+        <button onclick="sendMsg()">Send</button>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
